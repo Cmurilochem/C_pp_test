@@ -3,7 +3,7 @@
 // Include the cmath library
 #include <cmath>
 
-using namespace std; // OK! 
+using namespace std; // OK! Testing git
 
 //
 /* Intersting features of C++: structures, references, pointers */

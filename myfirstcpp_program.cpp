@@ -1,6 +1,7 @@
 #include <iostream>
-#include "outside_func.h"
-#include <string>
+#include <cmath> // Include the cmath library
+#include <string> // when dealing with strings 
+#include "outside_func.h" // file with external functions 
 
 using namespace std; // OK! Testing git
 
@@ -218,11 +219,11 @@ int main() {
   cout << ptr << " " << *ptr << "\n";  // has the same memory address as food and the same value
 
 
-// calling an function defined in another file
+// calling an external function defined in another file
 
   outside_function();
 
-  
+  absolute(-4);
 
   return 0;
 }

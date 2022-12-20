@@ -2,8 +2,6 @@
 /* this is an external file containing some functions */
 //
 
-#include <cmath> // Include the cmath library
-
 using namespace std;
 
 void outside_function(){

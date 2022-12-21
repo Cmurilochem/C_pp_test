@@ -3,7 +3,7 @@
 #include <string> // when dealing with strings 
 #include "outside_func.h" // file with external functions 
 
-using namespace std; // OK! Testing git
+using namespace std; // OK! Testing git - testing branches
 
 //
 /* Intersting features of C++: structures, references, pointers */

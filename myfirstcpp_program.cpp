@@ -23,6 +23,16 @@ struct car {
   int year;
 };
 
+void myFunction(); // example of definition of the funtion in the end
+
+void weekDay(string day, int year); // example of function with argument but no return value
+
+void myVector(int size, int vector[]){ // vector with undefined size 
+  for (int i=0; i<size; i++){
+    cout << vector[i] << endl;
+  }
+}
+
 int main() {
   int x,i;
   double mynum,othernum,sum; // declaration like in fortran
@@ -223,7 +233,24 @@ int main() {
 
   outside_function();
 
-  absolute(-4);
+  absolute(-4.0);
+
+  myFunction();
+
+  weekDay("Wednesday",2022);
+
+  myVector(5,myNumbers);
 
   return 0;
+}
+
+//
+/* definition of the function in the end*/
+//
+void myFunction(){
+  cout << "test function made by me" << endl;
+}
+
+void weekDay(string day, int year){
+  cout << "Today is " << day << " " << year << endl;
 }

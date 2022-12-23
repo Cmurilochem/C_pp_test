@@ -23,6 +23,24 @@ struct car {
   int year;
 };
 
+//
+/* example of a class with attributes (variables) and methods (functions)*/
+//
+  class MyClass{       // creating a class
+    public:            // access type 
+
+      int myNum;       // attribute/variable int
+      string myString; // attribute/variable string
+
+      void myMethod(){  // method/function
+        cout << "Hi, I am a function associated with an object\n";
+      }
+
+      Myclass(){        // constructor
+        cout << "I am a constructor, a special type of class function" << endl;
+      }
+  };
+
 void myFunction(); // example of definition of the funtion in the end
 
 void weekDay(string day, int year); // example of function with argument but no return value
@@ -240,6 +258,18 @@ int main() {
   weekDay("Wednesday",2022);
 
   myVector(5,myNumbers);
+
+// C++ object-oriented programming OOP
+
+  MyClass myObj;
+
+  myObj.myNum = 15;
+  myObj.myString = "Totina"; 
+
+  cout << "Object attributes and methods\n";
+  cout << myObj.myNum << endl;
+  cout << myObj.myString << endl;
+  myObj.myMethod();
 
   return 0;
 }

@@ -1,6 +1,8 @@
 #include <iostream>
-#include <cmath> // Include the cmath library
-#include <string> // when dealing with strings 
+#include <fstream> // library that allows us to work with files
+#include <cmath> // Includes the cmath library
+#include <string> // when dealing with strings
+#include <vector> // dealing with vectors 
 #include "outside_func.h" // file with external functions 
 
 using namespace std; 
@@ -29,6 +31,10 @@ struct car {
   class MyClass{       // creating a class
     public:            // access type 
 
+      //Myclass(){        // constructor
+      //  cout << "I am a constructor, a special type of class function" << endl;
+      //}    
+
       int myNum;       // attribute/variable int
       string myString; // attribute/variable string
 
@@ -36,10 +42,27 @@ struct car {
         cout << "Hi, I am a function associated with an object\n";
       }
 
-      Myclass(){        // constructor
-        cout << "I am a constructor, a special type of class function" << endl;
-      }
   };
+
+//
+/* example of a class with encapsulation */ 
+//
+class Employee {
+  private:
+    // Private attribute
+    int salary;
+
+  public:
+    // Setter
+    void setSalary(int s) {
+      salary = s;
+    }
+    // Getter
+    int getSalary() {
+      return salary;
+    }
+};
+
 
 void myFunction(); // example of definition of the funtion in the end
 
@@ -261,7 +284,7 @@ int main() {
 
 // C++ object-oriented programming OOP
 
-  MyClass myObj;
+  MyClass myObj; // setting an object with attributes and methods
 
   myObj.myNum = 15;
   myObj.myString = "Totina"; 
@@ -270,6 +293,33 @@ int main() {
   cout << myObj.myNum << endl;
   cout << myObj.myString << endl;
   myObj.myMethod();
+
+
+  Employee Murilo; //setting another object
+
+  Murilo.setSalary(50000);
+  cout << Murilo.getSalary() << endl;
+
+// now let's work with files
+
+// first, let's read something from a file
+
+string myText;
+
+ifstream InputFile("input.inp");
+
+while (getline(InputFile,myText)){ // reads the file line-by-line
+  cout << myText << endl;
+} 
+
+// second, lets write to a file
+
+ofstream OutputFile("output.out");
+
+OutputFile << myText << endl;
+
+InputFile.close();
+OutputFile.close();
 
   return 0;
 }

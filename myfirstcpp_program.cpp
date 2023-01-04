@@ -321,6 +321,25 @@ OutputFile << myText << endl;
 InputFile.close();
 OutputFile.close();
 
+//
+/* Finally, lets deal with exceptions or errors 
+   and for this we use the try, throw and catch keywords */
+//
+
+int age = 15;
+
+try { // this is a block that checks some info
+  if (age >= 18) {
+    cout << "Access granted - you are old enough.";
+  } else {
+    throw (age); // if this provides an error do something with the catch block
+  }
+}
+catch (int myNum) { // this prints the warning message
+  cout << "Access denied - You must be at least 18 years old.\n";
+  cout << "Age is: " << myNum << endl;
+}
+
   return 0;
 }
 
